@@ -10,12 +10,12 @@
 		4C34E6F21AE9681C00DD115D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E6F11AE9681C00DD115D /* main.m */; };
 		4C34E6F51AE9681C00DD115D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E6F41AE9681C00DD115D /* AppDelegate.m */; };
 		4C34E6F81AE9681C00DD115D /* SimpleAgenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E6F61AE9681C00DD115D /* SimpleAgenda.xcdatamodeld */; };
-		4C34E6FB1AE9681C00DD115D /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E6FA1AE9681C00DD115D /* AddEventViewController.m */; };
 		4C34E6FE1AE9681C00DD115D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C34E6FC1AE9681C00DD115D /* Main.storyboard */; };
 		4C34E7001AE9681C00DD115D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C34E6FF1AE9681C00DD115D /* Images.xcassets */; };
 		4C34E7031AE9681C00DD115D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C34E7011AE9681C00DD115D /* LaunchScreen.xib */; };
 		4C34E70F1AE9681C00DD115D /* SimpleAgendaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E70E1AE9681C00DD115D /* SimpleAgendaTests.m */; };
-		4C34E71A1AE9697500DD115D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E7191AE9697500DD115D /* EventsListTableViewController.m */; };
+		4C34E7201AE96C6800DD115D /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E71D1AE96C6800DD115D /* AddEventViewController.m */; };
+		4C34E7211AE96C6800DD115D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E71F1AE96C6800DD115D /* EventsListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,16 +35,16 @@
 		4C34E6F31AE9681C00DD115D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C34E6F41AE9681C00DD115D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4C34E6F71AE9681C00DD115D /* SimpleAgenda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleAgenda.xcdatamodel; sourceTree = "<group>"; };
-		4C34E6F91AE9681C00DD115D /* AddEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
-		4C34E6FA1AE9681C00DD115D /* AddEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		4C34E6FD1AE9681C00DD115D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C34E6FF1AE9681C00DD115D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C34E7021AE9681C00DD115D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4C34E7081AE9681C00DD115D /* SimpleAgendaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAgendaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C34E70D1AE9681C00DD115D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C34E70E1AE9681C00DD115D /* SimpleAgendaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAgendaTests.m; sourceTree = "<group>"; };
-		4C34E7181AE9697500DD115D /* EventsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListTableViewController.h; sourceTree = "<group>"; };
-		4C34E7191AE9697500DD115D /* EventsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListTableViewController.m; sourceTree = "<group>"; };
+		4C34E71C1AE96C6800DD115D /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		4C34E71D1AE96C6800DD115D /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
+		4C34E71E1AE96C6800DD115D /* EventsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListTableViewController.h; sourceTree = "<group>"; };
+		4C34E71F1AE96C6800DD115D /* EventsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +86,10 @@
 		4C34E6EE1AE9681C00DD115D /* SimpleAgenda */ = {
 			isa = PBXGroup;
 			children = (
+				4C34E71B1AE96C6800DD115D /* ViewControllers */,
 				4C34E6F31AE9681C00DD115D /* AppDelegate.h */,
 				4C34E6F41AE9681C00DD115D /* AppDelegate.m */,
-				4C34E6F91AE9681C00DD115D /* AddEventViewController.h */,
-				4C34E6FA1AE9681C00DD115D /* AddEventViewController.m */,
 				4C34E6FC1AE9681C00DD115D /* Main.storyboard */,
-				4C34E7181AE9697500DD115D /* EventsListTableViewController.h */,
-				4C34E7191AE9697500DD115D /* EventsListTableViewController.m */,
 				4C34E6FF1AE9681C00DD115D /* Images.xcassets */,
 				4C34E7011AE9681C00DD115D /* LaunchScreen.xib */,
 				4C34E6F61AE9681C00DD115D /* SimpleAgenda.xcdatamodeld */,
@@ -125,6 +122,17 @@
 				4C34E70D1AE9681C00DD115D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C34E71B1AE96C6800DD115D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C34E71C1AE96C6800DD115D /* AddEventViewController.h */,
+				4C34E71D1AE96C6800DD115D /* AddEventViewController.m */,
+				4C34E71E1AE96C6800DD115D /* EventsListTableViewController.h */,
+				4C34E71F1AE96C6800DD115D /* EventsListTableViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C34E6F81AE9681C00DD115D /* SimpleAgenda.xcdatamodeld in Sources */,
+				4C34E7201AE96C6800DD115D /* AddEventViewController.m in Sources */,
 				4C34E6F51AE9681C00DD115D /* AppDelegate.m in Sources */,
-				4C34E6FB1AE9681C00DD115D /* AddEventViewController.m in Sources */,
 				4C34E6F21AE9681C00DD115D /* main.m in Sources */,
-				4C34E71A1AE9697500DD115D /* EventsListTableViewController.m in Sources */,
+				4C34E7211AE96C6800DD115D /* EventsListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
