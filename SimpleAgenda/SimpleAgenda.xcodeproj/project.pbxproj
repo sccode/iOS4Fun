@@ -16,6 +16,7 @@
 		4C34E70F1AE9681C00DD115D /* SimpleAgendaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E70E1AE9681C00DD115D /* SimpleAgendaTests.m */; };
 		4C34E7201AE96C6800DD115D /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E71D1AE96C6800DD115D /* AddEventViewController.m */; };
 		4C34E7211AE96C6800DD115D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E71F1AE96C6800DD115D /* EventsListTableViewController.m */; };
+		4CEC5A2E1AE9B94700002451 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC5A2D1AE9B94700002451 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		4C34E71D1AE96C6800DD115D /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		4C34E71E1AE96C6800DD115D /* EventsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListTableViewController.h; sourceTree = "<group>"; };
 		4C34E71F1AE96C6800DD115D /* EventsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListTableViewController.m; sourceTree = "<group>"; };
+		4CEC5A2C1AE9B94700002451 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		4CEC5A2D1AE9B94700002451 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 		4C34E6EE1AE9681C00DD115D /* SimpleAgenda */ = {
 			isa = PBXGroup;
 			children = (
+				4CEC5A2B1AE9B94700002451 /* Models */,
 				4C34E71B1AE96C6800DD115D /* ViewControllers */,
 				4C34E6F31AE9681C00DD115D /* AppDelegate.h */,
 				4C34E6F41AE9681C00DD115D /* AppDelegate.m */,
@@ -133,6 +137,15 @@
 				4C34E71F1AE96C6800DD115D /* EventsListTableViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4CEC5A2B1AE9B94700002451 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CEC5A2C1AE9B94700002451 /* Event.h */,
+				4CEC5A2D1AE9B94700002451 /* Event.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 				4C34E6F51AE9681C00DD115D /* AppDelegate.m in Sources */,
 				4C34E6F21AE9681C00DD115D /* main.m in Sources */,
 				4C34E7211AE96C6800DD115D /* EventsListTableViewController.m in Sources */,
+				4CEC5A2E1AE9B94700002451 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +446,7 @@
 				4C34E7141AE9681C00DD115D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C34E7151AE9681C00DD115D /* Build configuration list for PBXNativeTarget "SimpleAgendaTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +455,7 @@
 				4C34E7171AE9681C00DD115D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

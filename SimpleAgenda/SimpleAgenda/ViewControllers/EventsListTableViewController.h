@@ -10,6 +10,5 @@
 
 @interface EventsListTableViewController : UITableViewController
 
-- (IBAction)unwindToEventsList:(UIStoryboardSegue *)segue;
 
 @end

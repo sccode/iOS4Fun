@@ -8,20 +8,26 @@
 
 #import "EventsListTableViewController.h"
 
+#import "AddEventViewController.h"
+
+static NSString *cellIdentifier = @"Event Cell";
+static NSString *emptyAgenda = @"No event has been scheduled.";
+
 @interface EventsListTableViewController ()
+
+// A dictionary mapping from dates to an array of events scheduled on that day.
+@property(nonatomic, copy) NSDictionary *agenda;
+
+- (IBAction)unwindToEventsList:(UIStoryboardSegue *)segue;
 
 @end
 
 @implementation EventsListTableViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  [super viewDidLoad];
+
+  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,22 +35,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)unwindToEventsList:(UIStoryboardSegue *)segue {
-  
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+  return self.agenda.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+  if (self.agenda.count > section) {
+    NSArray *events = [self.agenda objectForKey:self.agenda.allKeys[section]];
+    return events.count;
+  }
+  return 0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+  if (self.agenda.count > 0) {
+    return self.agenda.allKeys[section];
+  }
+  return nil;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+  if (self.agenda.count > 0) {
+    NSArray *events = [self.agenda objectForKey:self.agenda.allKeys[indexPath.section]];
+    Event *event = events[indexPath.row];
+    [cell.textLabel setText:event.eventName];
+  }
+  return cell;
 }
 
 /*
@@ -91,14 +110,20 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)unwindToEventsList:(UIStoryboardSegue *)segue {
+  AddEventViewController *source = [segue sourceViewController];
+  Event *event = source.event;
+  if (event != nil) {
+    NSLog(@"Adding event: %@", event);
+    NSMutableArray *events = [NSMutableArray arrayWithArray:[self.agenda objectForKey:event.startDate]];
+    [events addObject:event];
+    NSMutableDictionary *mutableAgenda = [NSMutableDictionary dictionaryWithDictionary:self.agenda];
+    [mutableAgenda setObject:events forKey:event.startDate];
+    self.agenda = [mutableAgenda copy];
+    [self.tableView reloadData];
+  }
 }
-*/
 
 @end

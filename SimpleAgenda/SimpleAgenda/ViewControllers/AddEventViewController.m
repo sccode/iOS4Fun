@@ -10,6 +10,10 @@
 
 @interface AddEventViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
 @end
 
 @implementation AddEventViewController
@@ -22,6 +26,23 @@
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if (sender != self.saveButton) return;
+
+  if (self.nameTextField.text.length > 0) {
+    self.event = [[Event alloc] init];
+    self.event.eventName = self.nameTextField.text;
+    self.event.startDate = [NSDateFormatter localizedStringFromDate:self.startDatePicker.date
+                                                          dateStyle:NSDateFormatterMediumStyle
+                                                          timeStyle:NSDateFormatterNoStyle];
+  }
+  // Get the new view controller using [segue destinationViewController].
+  // Pass the selected object to the new view controller.
 }
 
 @end
